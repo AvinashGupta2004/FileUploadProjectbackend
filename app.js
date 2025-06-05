@@ -24,7 +24,7 @@ app.post("/upload",upload.single("file"),(req,res)=>{
         res.end("File uploaded!");
     }
     catch(error){
-        console.log(error);
+        res.send(error);
     }
 });
 
