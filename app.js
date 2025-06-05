@@ -20,8 +20,12 @@ app.get("/",(req,res)=>{
 });
 
 app.post("/upload",upload.single("file"),(req,res)=>{
-    console.log(req.file);
-    res.end("File uploaded!");
+    try{
+        res.end("File uploaded!");
+    }
+    catch(error){
+        console.log(error);
+    }
 });
 
 app.listen(process.env.PORT,()=>{
