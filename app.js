@@ -24,7 +24,7 @@ app.post("/upload",upload.single("file"),(req,res)=>{
     res.end("File uploaded!");
 });
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Server is running on port 3000");
 })
 
